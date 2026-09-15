@@ -1,0 +1,28 @@
+YAML
+name: Build Thinstation ISO
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up build environment
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cdbs squashfs-tools mtools genisoimage syslinux git
+
+      - name: Run Thinstation Setup and Build
+        run: |
+          sudo ./setup-chroot --batch
+          sudo ./build --allmodules
+
+      - name: Upload ISO Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: thinstation-iso
+          path: boot-images/iso/*.iso
