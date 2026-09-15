@@ -30,7 +30,7 @@ SESSION_0_TITLE="Citrix Workspace Web"
 SESSION_0_AUTOSTART=On
 
 # Imposta l'URL esatto della pagina Citrix aziendale
-CHROME_HOMEPAGE="https://citrix.tuaazienda.it"
+CHROME_HOMEPAGE="https://virtualcomputing.agenziadogane.it/"
 
 # Parametri per bloccare Chrome in Kiosk Mode
 CHROME_OPTIONS="--kiosk --no-first-run --disable-translate --disable-infobars --disable-suggestions-ui --disable-save-password-bubble --incognito https://citrix.tuaazienda.it"
