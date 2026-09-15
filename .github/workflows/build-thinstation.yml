@@ -17,8 +17,8 @@ jobs:
 
       - name: Run Thinstation Setup and Build
         run: |
-          cd ts
           sudo ./setup-chroot --batch
+          cd ts
           sudo ./build --allmodules
 
       - name: Upload ISO Artifact
