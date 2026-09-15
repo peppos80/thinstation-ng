@@ -13,7 +13,7 @@ jobs:
       - name: Set up build environment
         run: |
           sudo apt-get update
-          sudo apt-get install -y cdbs squashfs-tools mtools genisoimage syslinux git
+          sudo apt-get install -y dnf rpm squashfs-tools mtools genisoimage syslinux libarchive-tools git
 
       - name: Run Thinstation Setup and Build
         run: |
